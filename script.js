@@ -28,7 +28,7 @@ produk.forEach((p) => {
 const beliSekarang = document.getElementById("beli-sekarang");
 beliSekarang.addEventListener("click", () => {
 
-  alert("Anda telah membeli produk!");
+  alert("✔Terimakasih Sudah Berbelanja ! 😉💕");
 });
 
 
@@ -38,5 +38,5 @@ kirimPesan.addEventListener("click", () => {
   const email = document.getElementById("email").value;
   const pesan = document.getElementById("pesan").value;
   
-  alert(`Terima kasih, ${nama}! Pesan Anda telah terkirim.`);
+  alert(`Terima Kasih, ${nama}! Atas Pesanan Anda 😊👌.`);
 });
