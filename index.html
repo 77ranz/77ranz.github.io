@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <style>
+    /* Gambar berputar */
+    .gambar-putar {
+      width: 200px; /* Ukuran gambar */
+      height: 100px;
+      animation: putar 5s linear infinite; /* Menentukan animasi berputar */
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Gambar di kiri */
+    .gambar-putar.kiri {
+      left: 10px; /* Posisi gambar di kiri */
+      filter: hue-rotate(0deg); /* Merah */
+    }
+
+    /* Gambar di kanan */
+    .gambar-putar.kanan {
+      right: 10px; /* Posisi gambar di kanan */
+      filter: hue-rotate(180deg); /* Biru */
+    }
+
+   
+
+    /* Animasi putar */
+    @keyframes putar {
+      0% {
+        transform: rotate(0deg); /* Mulai dari posisi awal */
+      }
+      100% {
+        transform: rotate(360deg); /* Putar sampai 360 derajat */
+      }
+    }
+    
+    /* Style untuk teks bergerak */
+    #teks {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="teks">Selamat Datang di Website QANITA Online Shop</div>
+
+  <script>
+    var teks = "Selamat Datang di Website Kami!";
+    var kecepatan = 20;
+
+    function geserTeks() {
+      var elemenTeks = document.getElementById("teks");
+
+      var marginLeft = parseInt(elemenTeks.style.marginLeft, 10);
+
+      if (isNaN(marginLeft)) {
+        marginLeft = window.innerWidth;
+      }
+
+      marginLeft -= 1; 
+
+      elemenTeks.style.marginLeft = marginLeft + "px";
+
+      if (marginLeft < -elemenTeks.offsetWidth) {
+        elemenTeks.style.marginLeft = window.innerWidth + "px";
+      }
+    }
+
+    setInterval(geserTeks, kecepatan);
+  </script>
+
+  <main>
+    
+    
+
+<style>
+    #home {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 1px; /* Beri jarak antar elemen */
+    }
+
+    .gambar-putar {
+        width: 100px; /* Sesuaikan ukuran gambar */
+    }
+
+    #video-container {
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    iframe, video {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<section id="home">
+    <h1>Selamat Datang di Landing Page</h1>
+    <p>Ini adalah contoh landing page sederhana untuk jualan.</p>
+    <button id="beli-sekarang">Beli Sekarang</button>
+    
+    <!-- Gambar di kiri dan kanan -->
+    <img src="a.png" alt="PESTA DISCOUNT" class="gambar-putar kiri">
+    <img src="a.png" alt="PESTA DISCOUNT" class="gambar-putar kanan">
+</section>
+
+<!-- Bagian Video yang Dipisahkan -->
+<section id="video-container">
+    <!-- Video menggunakan iframe YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9BxMY899XqY" frameborder="0" allowfullscreen></iframe>
+
+    <!-- Video dengan format yang lebih kompatibel -->
+    <video width="560" height="315" controls>
+        <source src="a.mp4" type="video/mp4">
+        <source src="a.webm" type="video/webm"> 
+        Browser Anda tidak mendukung pemutaran video.
+    </video>
+</section>
+
+
+
+    <section id="produk">
+      <h1>Produk Kami</h1>
+      <ul id="daftar-produk">
+        <span class="panah">&darr;</span>
+        <p id="kedip">DISCOUNT 75%</p>
+        <!-- Daftar produk akan ditampilkan di sini -->
+      </ul>
+    </section>
+    
+    <section id="kontak">
+      <h1>Kontak Kami</h1>
+      <form id="form-kontak">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan"></textarea><br><br>
+        <button id="kirim-pesan">Kirim Pesan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 77ranz Production</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

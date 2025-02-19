@@ -1,0 +1,112 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+}
+
+.panah {
+  font-size: 150px;
+  color: red;
+  display: inline-block;
+  animation: gerakPanah 0.5s infinite ease-in-out;
+}
+
+@keyframes gerakPanah {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+button {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+section {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: pink(10px);
+}
+
+#tulisan {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: berjalan 10s linear infinite;
+  font-size: 20px;
+  color: blue;
+}
+
+@keyframes berjalan {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+#kedip {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  animation: kedipAnimasi 1s infinite alternate;
+}
+
+@keyframes kedipAnimasi {
+  0% { opacity: 10; }
+  100% { opacity: 0; }
+}
+
+footer {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
