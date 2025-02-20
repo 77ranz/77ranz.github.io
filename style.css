@@ -9,7 +9,7 @@ body {
 
 header {
   background: linear-gradient(90deg, #ff416c, #ff4b2b);
-  color: #fff;
+  color: BLACK;
   padding: 20px;
   text-align: center;
   font-size: 24px;
@@ -41,7 +41,7 @@ nav a:hover {
 }
 
 .panah {
-  font-size: 150px;
+  font-size: 100px;
   color: red;
   display: inline-block;
   animation: gerakPanah 0.5s infinite ease-in-out;
@@ -81,9 +81,9 @@ section {
 #tulisan {
   white-space: nowrap;
   overflow: hidden;
-  animation: berjalan 10s linear infinite;
+  animation: berjalan 1s linear infinite;
   font-size: 20px;
-  color: blue;
+  color: red;
 }
 
 @keyframes berjalan {
@@ -96,7 +96,7 @@ section {
   font-weight: bold;
   color: black;
   text-align: center;
-  animation: kedipAnimasi 1s infinite alternate;
+  animation: kedipAnimasi 10s infinite alternate;
 }
 
 @keyframes kedipAnimasi {
